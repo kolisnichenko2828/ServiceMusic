@@ -11,11 +11,9 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.staskokoc.servicesmusic.presentation.services.MusicService
+import com.staskokoc.servicesmusic.presentation.services.MusicStartedService
 import com.staskokoc.servicesmusic.presentation.theme.ServicesMusicTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,7 +35,7 @@ class MainActivity : ComponentActivity() {
                                 startService(
                                     Intent(
                                         this@MainActivity,
-                                        MusicService::class.java
+                                        MusicStartedService::class.java
                                     )
                                 )
                             }
@@ -49,7 +47,7 @@ class MainActivity : ComponentActivity() {
                                 stopService(
                                     Intent(
                                         this@MainActivity,
-                                        MusicService::class.java
+                                        MusicStartedService::class.java
                                     )
                                 )
                             }

@@ -6,7 +6,7 @@ import android.media.MediaPlayer
 import android.os.IBinder
 import android.provider.Settings
 
-class MusicService : Service() {
+class MusicStartedService : Service() {
     private lateinit var player: MediaPlayer
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
